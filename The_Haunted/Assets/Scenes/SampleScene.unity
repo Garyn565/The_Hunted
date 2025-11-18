@@ -131,6 +131,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.26000023
@@ -191,6 +203,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -392,6 +416,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1392403
@@ -452,6 +488,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -529,6 +577,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.3992405
@@ -595,6 +655,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.72924
@@ -660,6 +732,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -803,6 +887,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.74924
@@ -863,6 +959,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -930,6 +1038,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.31924
@@ -995,6 +1115,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1075,7 +1207,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.37198, y: 0, z: 7.38867}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 15, y: 1, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 869657893}
@@ -1340,6 +1472,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.6499996
@@ -1400,6 +1544,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1594,6 +1750,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.059999466
@@ -1783,6 +1951,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1974,6 +2154,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.24
@@ -2039,6 +2231,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2230,6 +2434,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.379241
@@ -2290,6 +2506,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2362,6 +2590,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.079241
@@ -2422,6 +2662,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2493,6 +2745,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2813,6 +3077,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.709241
@@ -2938,6 +3214,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.66
@@ -3056,6 +3344,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3252,6 +3552,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.40999985
@@ -3312,6 +3624,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3378,6 +3702,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3450,6 +3786,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.6800003
@@ -3510,6 +3858,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3587,6 +3947,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.36
@@ -3647,6 +4019,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3719,6 +4103,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1592398
@@ -3779,6 +4175,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3846,6 +4254,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.3499994
@@ -3907,6 +4327,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.59
@@ -3967,6 +4399,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4153,7 +4597,7 @@ Transform:
   m_GameObject: {fileID: 1287267692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.51, y: 1, z: -0.07}
+  m_LocalPosition: {x: 3.51, y: 1, z: -42.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4175,6 +4619,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4242,6 +4698,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.92
@@ -4307,6 +4775,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4384,6 +4864,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -4454,6 +4946,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4535,6 +5039,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4731,6 +5247,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.04924
@@ -4926,6 +5454,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1592398
@@ -4986,6 +5526,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5048,6 +5600,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.33
@@ -5108,6 +5672,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5443,6 +6019,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.75924
@@ -5508,6 +6096,18 @@ PrefabInstance:
     - target: {fileID: 6214268876707639599, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_Name
       value: Zombie (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: wanderInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: separationWeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258139693259055750, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
+      propertyPath: drawDebugNeighbors
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6734662870738201493, guid: 0be4ea1950d636b409d72e586bfc5341, type: 3}
       propertyPath: m_LocalPosition.x

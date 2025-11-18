@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 public class AI_Communication : MonoBehaviour
 {
+    // This keeps track of ALL AI in the scene automatically
     public static List<AI_Communication> allAI = new List<AI_Communication>();
 
     [Header("Communication Settings")]
-    public float alertRadius = 20f;
+    public float alertRadius = 20f;   // How far alerts travel
 
-    [HideInInspector]
-    public Hunting huntingScript;
+    private Hunting huntingScript;
 
     private void Awake()
     {
@@ -21,42 +21,41 @@ public class AI_Communication : MonoBehaviour
 
     private void OnEnable()
     {
-        if (!allAI.Contains(this))
-            allAI.Add(this);
+        allAI.Add(this);
     }
 
     private void OnDisable()
     {
-        if (allAI.Contains(this))
-            allAI.Remove(this);
+        allAI.Remove(this);
     }
 
-    // ===========================================================
-    // BROADCAST ALERT TO NEARBY AI
-    // ===========================================================
-    public static void AlertNearbyAI(Vector3 alertPosition, float radius)
+    // ================================================================
+    //  ALERT SYSTEM
+    // ================================================================
+    public static void AlertNearbyAI(Vector3 alertPos, float radius)
     {
         foreach (AI_Communication ai in allAI)
         {
-            float dist = Vector3.Distance(alertPosition, ai.transform.position);
+            if (ai == null) continue;
+
+            float dist = Vector3.Distance(alertPos, ai.transform.position);
 
             if (dist <= radius)
             {
-                ai.ReceiveAlert(alertPosition);
+                ai.ReceiveAlert(alertPos);
             }
         }
     }
 
-    // ===========================================================
-    // RECEIVE ALERT FROM ANOTHER AI
-    // ===========================================================
+    // Called individually on each AI that hears the alert
     public void ReceiveAlert(Vector3 alertSource)
     {
         if (huntingScript == null)
             return;
 
-        Debug.Log($"{name} → ALERT RECEIVED from another AI!");
+        Debug.Log($"{name} → RECEIVED ALERT!");
 
+        // Cleanly call Hunting's built-in function
         huntingScript.ReceiveExternalAlert(alertSource);
     }
 }
