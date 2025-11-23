@@ -105,20 +105,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54e8df4045131a4c8921dff49cc5d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hunting
-  scanRadius: 15
-  fieldOfView: 90
-  eyeHeight: 1.6
-  rayCount: 10
-  detectionMask:
-    serializedVersion: 2
-    m_Bits: 72
-  lockOnTime: 1
-  memoryTime: 1.5
+  currentState: 0
   wanderRadius: 10
   wanderInterval: 2
+  scanInterval: 2
   chaseSpeed: 5
-  wanderSpeed: 2
-  chaseForgetTime: 5
+  normalSpeed: 2
+  detectionRadius: 15
+  loseSightMultiplier: 2
+  neighborRadius: 5
+  separationWeight: 3
+  alignmentWeight: 2.5
+  cohesionWeight: 1.8
+  maxSteer: 6
+  alertRadius: 20
+  drawDebugNeighbors: 0
 --- !u!114 &7650249224650435408
 MonoBehaviour:
   m_ObjectHideFlags: 0
