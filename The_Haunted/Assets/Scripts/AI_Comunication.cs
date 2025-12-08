@@ -3,59 +3,85 @@ using System.Collections.Generic;
 
 public class AI_Communication : MonoBehaviour
 {
-    // This keeps track of ALL AI in the scene automatically
+    // List of all AI units
     public static List<AI_Communication> allAI = new List<AI_Communication>();
 
-    [Header("Communication Settings")]
-    public float alertRadius = 20f;   // How far alerts travel
+    // The current squad leader (only one does the heavy pathfinding)
+    public static AI_Communication currentLeader = null;
 
-    private Hunting huntingScript;
+    [Header("Communication Settings")]
+    public float alertRadius = 25f;
+
+    private Hunting hunting;
 
     private void Awake()
     {
-        huntingScript = GetComponent<Hunting>();
-
-        if (huntingScript == null)
-            Debug.LogError($"{name} has AI_Communication but NO Hunting script attached!");
+        hunting = GetComponent<Hunting>();
+        if (hunting == null)
+            Debug.LogError($"{name} has AI_Communication but no Hunting script!");
     }
 
     private void OnEnable()
     {
-        allAI.Add(this);
+        if (!allAI.Contains(this))
+            allAI.Add(this);
     }
 
     private void OnDisable()
     {
         allAI.Remove(this);
+
+        // If the leader is disabled/dies → clear leadership
+        if (currentLeader == this)
+            currentLeader = null;
     }
 
-    // ================================================================
-    //  ALERT SYSTEM
-    // ================================================================
-    public static void AlertNearbyAI(Vector3 alertPos, float radius)
+    // ============================================================
+    // PUBLIC: Trigger Alert (usually called from Hunting)
+    // ============================================================
+    public void SendAlert(Vector3 enemyPos)
     {
+        AlertNearbyAI(this, enemyPos, alertRadius);
+    }
+
+    // ============================================================
+    // STATIC: Alert all nearby AI
+    // ============================================================
+    public static void AlertNearbyAI(AI_Communication spotter, Vector3 alertPos, float radius)
+    {
+        // Assign leader if none exists
+        if (currentLeader == null)
+            currentLeader = spotter;
+
         foreach (AI_Communication ai in allAI)
         {
             if (ai == null) continue;
 
-            float dist = Vector3.Distance(alertPos, ai.transform.position);
-
+            float dist = Vector3.Distance(ai.transform.position, alertPos);
             if (dist <= radius)
-            {
-                ai.ReceiveAlert(alertPos);
-            }
+                ai.ReceiveAlert(alertPos, currentLeader);
         }
     }
 
-    // Called individually on each AI that hears the alert
-    public void ReceiveAlert(Vector3 alertSource)
+    // ============================================================
+    // RECEIVING ALERT
+    // ============================================================
+    public void ReceiveAlert(Vector3 enemyPos, AI_Communication leader)
     {
-        if (huntingScript == null)
+        if (hunting == null)
             return;
 
-        Debug.Log($"{name} → RECEIVED ALERT!");
+        bool isLeader = (this == leader);
 
-        // Cleanly call Hunting's built-in function
-        huntingScript.ReceiveExternalAlert(alertSource);
+        if (isLeader)
+        {
+            // Leader does pathfinding
+            hunting.BeginLeaderHunt(enemyPos);
+        }
+        else
+        {
+            // Followers just track the leader with no pathfinding
+            hunting.BeginFollowerHunt(leader.transform);
+        }
     }
 }

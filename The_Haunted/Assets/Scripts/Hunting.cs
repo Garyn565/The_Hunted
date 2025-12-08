@@ -17,22 +17,16 @@ public class Hunting : MonoBehaviour
     public float chaseSpeed = 4f;
     public float normalSpeed = 2f;
     public float detectionRadius = 15f;
-    public float loseSightMultiplier = 2f; // how far before AI gives up
+    public float loseSightMultiplier = 2f;
 
     [Header("Boids (Hybrid) Settings")]
-    [Tooltip("How far the AI considers other AI as neighbors.")]
-    public float neighborRadius = 5f;                // your requested 5 meters
-    [Tooltip("Separation (avoid crowding) strength.")]
-    public float separationWeight = 3f;              // strong influence
-    [Tooltip("Alignment (match velocity) weight.")]
+    public float neighborRadius = 5f;
+    public float separationWeight = 3f;
     public float alignmentWeight = 2.5f;
-    [Tooltip("Cohesion (move toward group center) weight.")]
     public float cohesionWeight = 1.8f;
-    [Tooltip("Maximum magnitude of combined steering force (units/sec).")]
     public float maxSteer = 6f;
 
-    [Header("Detection / Communication")]
-    [Tooltip("If this AI spots the player, alert other AI within this radius.")]
+    [Header("Communication")]
     public float alertRadius = 20f;
 
     [Header("Debug")]
@@ -43,10 +37,11 @@ public class Hunting : MonoBehaviour
 
     private float wanderTimer;
     private float scanTimer;
-    private float forgetTimer;
 
-    // Local state
-    private Vector3 lastSteer = Vector3.zero;
+    // FOLLOWER MODE: Who to follow?
+    private Transform leaderToFollow = null;
+
+    // State control
     private bool hasAlertedNearby = false;
 
     void Start()
@@ -57,17 +52,37 @@ public class Hunting : MonoBehaviour
         GameObject obj = GameObject.FindGameObjectWithTag("Player");
         if (obj != null)
             player = obj.transform;
-        else
-            Debug.LogError($"{name}: Player with tag 'Player' not found.");
 
         wanderTimer = wanderInterval;
         scanTimer = scanInterval;
-        forgetTimer = 0f;
+    }
+
+    // Called by AI_Communication (leader)
+    public void BeginLeaderHunt(Vector3 enemyPos)
+    {
+        leaderToFollow = null;       // I'm the leader
+        currentState = AIState.Chasing;
+
+        hasAlertedNearby = true;
+        agent.speed = chaseSpeed;
+
+        agent.SetDestination(enemyPos);
+    }
+
+    // Called by AI_Communication (followers)
+    public void BeginFollowerHunt(Transform leaderTransform)
+    {
+        leaderToFollow = leaderTransform;
+        currentState = AIState.Chasing;
+
+        hasAlertedNearby = true;
+        agent.speed = chaseSpeed;
+
+        agent.ResetPath(); // followers DO NOT pathfind
     }
 
     void Update()
     {
-        // Basic state machine
         switch (currentState)
         {
             case AIState.Wandering: HandleWandering(); break;
@@ -75,24 +90,20 @@ public class Hunting : MonoBehaviour
             case AIState.Chasing: HandleChasing(); break;
         }
 
-        // Always apply boids-style steering blended with agent movement
+        // Add boids steering every frame
         Vector3 steering = ComputeBoidsSteering();
-
-        // Cap steering
         if (steering.magnitude > maxSteer)
             steering = steering.normalized * maxSteer;
 
-        // Apply steering as a displacement on the agent (in world space)
         agent.Move(steering * Time.deltaTime);
 
-        // Optional debug draw
         if (drawDebugNeighbors)
             DebugDrawNeighbors();
     }
 
-    // --------------------------
-    // STATES
-    // --------------------------
+    // ============================================================
+    //  STATE: WANDERING
+    // ============================================================
     void HandleWandering()
     {
         agent.speed = normalSpeed;
@@ -103,8 +114,8 @@ public class Hunting : MonoBehaviour
 
         if (wanderTimer <= 0f)
         {
-            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius);
-            agent.SetDestination(newPos);
+            Vector3 dest = RandomNavSphere(transform.position, wanderRadius);
+            agent.SetDestination(dest);
             wanderTimer = wanderInterval;
         }
 
@@ -116,78 +127,93 @@ public class Hunting : MonoBehaviour
         }
     }
 
+    // ============================================================
+    //  STATE: SCANNING
+    // ============================================================
     void HandleScanning()
     {
         if (player == null) return;
 
         float dist = Vector3.Distance(transform.position, player.position);
+
         if (dist <= detectionRadius)
         {
-            Debug.Log($"{name} spotted the player!");
-
-            // Alert teammates once
+            // *** AI spotted the player — call communication system ***
             if (!hasAlertedNearby)
             {
                 hasAlertedNearby = true;
-                AI_Communication.AlertNearbyAI(transform.position, alertRadius);
-                Debug.Log($"{name} → Alerted nearby AI (radius {alertRadius}).");
+
+                // THIS AI becomes the leader if none exist
+                GetComponent<AI_Communication>().SendAlert(player.position);
             }
 
+            // If this AI also becomes leader → chasing logic picks it up
             currentState = AIState.Chasing;
             agent.speed = chaseSpeed;
-            forgetTimer = 0f;
             return;
         }
 
-        // not found, go back to wander
         currentState = AIState.Wandering;
     }
 
+    // ============================================================
+    //  STATE: CHASING
+    // ============================================================
     void HandleChasing()
     {
-        if (player == null) return;
+        // FOLLOWER MODE
+        if (leaderToFollow != null)
+        {
+            Vector3 dir = (leaderToFollow.position - transform.position).normalized;
+            agent.Move(dir * agent.speed * Time.deltaTime);
+            return;
+        }
 
-        agent.SetDestination(player.position);
+        // LEADER MODE — only the leader does real pathfinding
+        if (player != null)
+            agent.SetDestination(player.position);
 
         float dist = Vector3.Distance(transform.position, player.position);
+
         if (dist > detectionRadius * loseSightMultiplier)
         {
-            // Give up after too far away from player
             currentState = AIState.Wandering;
             agent.speed = normalSpeed;
-            hasAlertedNearby = false; // reset for next time
+
+            hasAlertedNearby = false;
+            leaderToFollow = null;
         }
     }
 
-    // --------------------------
-    // BOIDS (HYBRID) - separation, alignment, cohesion
-    // --------------------------
+    // ============================================================
+    //  BOIDS STEERING
+    // ============================================================
     Vector3 ComputeBoidsSteering()
     {
-        // Gather neighbors
         Vector3 separation = Vector3.zero;
         Vector3 alignment = Vector3.zero;
         Vector3 cohesion = Vector3.zero;
+
         int count = 0;
 
-        // Use AI_Communication.allAI as the group list (only AIs with component)
         foreach (AI_Communication other in AI_Communication.allAI)
         {
-            if (other == null || other.gameObject == this.gameObject) continue;
+            if (other == null || other.gameObject == this.gameObject)
+                continue;
 
             float d = Vector3.Distance(transform.position, other.transform.position);
-            if (d <= neighborRadius && d > 0f)
+            if (d <= neighborRadius)
             {
-                // Separation: away from close neighbors (strongest when very close)
-                Vector3 away = (transform.position - other.transform.position).normalized;
-                separation += away / d; // inverse by distance (closer -> stronger)
+                // Separation
+                Vector3 away = (transform.position - other.transform.position).normalized / d;
+                separation += away;
 
-                // Alignment: match agent velocity (use other agent's velocity if available)
-                NavMeshAgent otherAgent = other.GetComponent<NavMeshAgent>();
-                if (otherAgent != null)
-                    alignment += otherAgent.velocity;
+                // Alignment
+                NavMeshAgent oa = other.GetComponent<NavMeshAgent>();
+                if (oa != null)
+                    alignment += oa.velocity;
 
-                // Cohesion: steer toward group's average position
+                // Cohesion
                 cohesion += other.transform.position;
 
                 count++;
@@ -197,58 +223,29 @@ public class Hunting : MonoBehaviour
         if (count == 0)
             return Vector3.zero;
 
-        // Finalize components
         separation = separation.normalized * separationWeight;
         alignment = (alignment / count).normalized * alignmentWeight;
         cohesion = ((cohesion / count) - transform.position).normalized * cohesionWeight;
 
-        // Combine weights (strong separation influence as requested)
-        Vector3 steering = separation + alignment + cohesion;
-
-        // Slightly bias steering toward current agent forward to avoid abrupt perpendicular pushes
-        // (blend with forward to help NavMesh path following)
-        steering = Vector3.Lerp(Vector3.zero, steering, 1f); // you can tune lerp if you want less influence
-
-        lastSteer = steering;
-        return steering;
+        return separation + alignment + cohesion;
     }
 
-    // --------------------------
-    // External alert API (called by AI_Communication)
-    // --------------------------
-    public void ReceiveExternalAlert(Vector3 alertLocation)
-    {
-        Debug.Log($"{name} → Received communication alert (source: {alertLocation})");
-
-        // Immediately switch to chasing and head to alert source (but still apply boids)
-        currentState = AIState.Chasing;
-        agent.speed = chaseSpeed;
-        hasAlertedNearby = true;
-        agent.SetDestination(alertLocation);
-        forgetTimer = 0f;
-    }
-
-    // --------------------------
-    // UTILS
-    // --------------------------
+    // ============================================================
+    //  UTILITY
+    // ============================================================
     public static Vector3 RandomNavSphere(Vector3 origin, float dist)
     {
-        Vector3 randDir = Random.insideUnitSphere * dist + origin;
-        NavMesh.SamplePosition(randDir, out NavMeshHit navHit, dist, NavMesh.AllAreas);
+        Vector3 rand = Random.insideUnitSphere * dist + origin;
+        NavMesh.SamplePosition(rand, out NavMeshHit navHit, dist, NavMesh.AllAreas);
         return navHit.position;
     }
 
     void DebugDrawNeighbors()
     {
-        // draw neighbor radius
-        Debug.DrawLine(transform.position, transform.position + Vector3.up * 0.2f, Color.yellow);
         foreach (AI_Communication other in AI_Communication.allAI)
         {
             if (other == null) continue;
             Debug.DrawLine(transform.position, other.transform.position, Color.gray);
-            float d = Vector3.Distance(transform.position, other.transform.position);
-            if (d < neighborRadius)
-                Debug.DrawRay(transform.position, (other.transform.position - transform.position).normalized * d, Color.cyan);
         }
     }
 }
