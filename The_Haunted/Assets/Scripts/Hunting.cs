@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Hunting : MonoBehaviour
 {
-    public enum AIState { Wandering, Scanning, Chasing }
+    public enum AIState { Wandering, Scanning, Chasing, Following }
     public AIState currentState = AIState.Wandering;
 
     [Header("Movement Settings")]
@@ -43,6 +43,9 @@ public class Hunting : MonoBehaviour
 
     // State control
     private bool hasAlertedNearby = false;
+    private Vector3 cachedSteering;
+
+    public float boidsTimer { get; private set; }
 
     void Start()
     {
@@ -72,13 +75,19 @@ public class Hunting : MonoBehaviour
     // Called by AI_Communication (followers)
     public void BeginFollowerHunt(Transform leaderTransform)
     {
+        // In HandleChasing and HandleFollowing, when reverting to wandering:
+        var comm = GetComponent<AI_Communication>();
+        if (comm != null)
+        {
+            if (comm.groupLeader != null && comm.groupLeader.groupMembers.Contains(comm))
+                comm.groupLeader.groupMembers.Remove(comm);
+            comm.groupLeader = null;
+        }
+        if (leaderTransform == null)
+            return;
+
         leaderToFollow = leaderTransform;
-        currentState = AIState.Chasing;
-
-        hasAlertedNearby = true;
-        agent.speed = chaseSpeed;
-
-        agent.ResetPath(); // followers DO NOT pathfind
+        currentState = AIState.Following;
     }
 
     void Update()
@@ -88,10 +97,17 @@ public class Hunting : MonoBehaviour
             case AIState.Wandering: HandleWandering(); break;
             case AIState.Scanning: HandleScanning(); break;
             case AIState.Chasing: HandleChasing(); break;
+            case AIState.Following: HandleFollowing(); break;
         }
 
-        // Add boids steering every frame
-        Vector3 steering = ComputeBoidsSteering();
+        boidsTimer -= Time.deltaTime;
+        if (boidsTimer <= 0f)
+        {
+            cachedSteering = ComputeBoidsSteering();
+            boidsTimer = 0.2f; // recalculate every 0.2 seconds
+        }
+
+        Vector3 steering = cachedSteering;
         if (steering.magnitude > maxSteer)
             steering = steering.normalized * maxSteer;
 
@@ -161,27 +177,36 @@ public class Hunting : MonoBehaviour
     // ============================================================
     void HandleChasing()
     {
-        // FOLLOWER MODE
-        if (leaderToFollow != null)
-        {
-            Vector3 dir = (leaderToFollow.position - transform.position).normalized;
-            agent.Move(dir * agent.speed * Time.deltaTime);
-            return;
-        }
-
-        // LEADER MODE — only the leader does real pathfinding
         if (player != null)
-            agent.SetDestination(player.position);
-
-        float dist = Vector3.Distance(transform.position, player.position);
-
-        if (dist > detectionRadius * loseSightMultiplier)
         {
-            currentState = AIState.Wandering;
-            agent.speed = normalSpeed;
+            float dist = Vector3.Distance(transform.position, player.position);
 
-            hasAlertedNearby = false;
-            leaderToFollow = null;
+            if (dist > detectionRadius * loseSightMultiplier)
+            {
+                currentState = AIState.Wandering;
+                agent.speed = normalSpeed;
+
+                hasAlertedNearby = false;
+                leaderToFollow = null;
+
+                // Clear group membership
+                var comm = GetComponent<AI_Communication>();
+                if (comm != null)
+                {
+                    if (comm.groupLeader != null && comm.groupLeader.groupMembers.Contains(comm))
+                        comm.groupLeader.groupMembers.Remove(comm);
+                    comm.groupLeader = null;
+                }
+            }
+
+            if (!hasAlertedNearby)
+            {
+                hasAlertedNearby = true;
+                GetComponent<AI_Communication>().SendAlert(player.position);
+            }
+
+            // LEADER MODE — only the leader does real pathfinding
+            agent.SetDestination(player.position);
         }
     }
 
@@ -246,6 +271,34 @@ public class Hunting : MonoBehaviour
         {
             if (other == null) continue;
             Debug.DrawLine(transform.position, other.transform.position, Color.gray);
+        }
+    }
+    // Fix for CS8641, CS1003, CS1525, CS1026, CS1002 errors in the HandleFollowing method.
+
+    void HandleFollowing()
+    {
+        // Ensure the leader is valid
+        if (leaderToFollow != null)
+        {
+            // Follow the leader
+            Vector3 dir = (leaderToFollow.position - transform.position).normalized;
+            agent.Move(dir * agent.speed * Time.deltaTime);
+        }
+        else
+        {
+            // If leader is lost, revert to wandering
+            currentState = AIState.Wandering;
+
+            hasAlertedNearby = false; // Reset alert status
+
+            // Clear group membership
+            var comm = GetComponent<AI_Communication>();
+            if (comm != null)
+            {
+                if (comm.groupLeader != null && comm.groupLeader.groupMembers.Contains(comm))
+                    comm.groupLeader.groupMembers.Remove(comm);
+                comm.groupLeader = null;
+            }
         }
     }
 }
